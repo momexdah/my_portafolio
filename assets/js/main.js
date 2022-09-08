@@ -100,54 +100,104 @@ let swiperPortfolio = new Swiper(".portfolio-container", {
     el: ".swiper-pagination",
     clickable: true,
   },
- /*  mousewheel: true,
+  /*  mousewheel: true,
   keyboard: true, */
 });
 
 /* ============ TESTIMONIAL ============== */
 let swiperTestimonial = new Swiper(".testimonial-container", {
-    loop: true,
-    grabCursor:true,
-    spaceBetween: 48,
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  breakpoints: {
+    568: {
+      slidesPerView: 2,
     },
-
-    breakpoints:{
-        568:{
-            slidesPerView: 2,
-        }
-    }
-   /*  mousewheel: true,
+  },
+  /*  mousewheel: true,
     keyboard: true, */
-  });
+});
 
 /* ============ SCROLL SECTIONS ACTIVE LINK ============== */
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll("section[id]");
 
-function scrollActive(){
-    const scrollY = window.pageYOffset;
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id');
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector(`.nav-menu a[href*=${sectionId}]`).classList.add('active-link');
-        }else{
-            document.querySelector(`.nav-menu a[href*=${sectionId}]`).classList.remove('active-link');
-        }
-    })
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(`.nav-menu a[href*=${sectionId}]`)
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(`.nav-menu a[href*=${sectionId}]`)
+        .classList.remove("active-link");
+    }
+  });
 }
-window.addEventListener('scroll', scrollActive);
+window.addEventListener("scroll", scrollActive);
 /* ============ CHANGE BACKGROUND HEADER ============== */
-function scrollHeader(){
-    const nav = document.getElementById('header');
-    return (this.scrollY >= 80) ? nav.classList.add('scroll-header') : nav.classList.remove('scroll-header');
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  return this.scrollY >= 80
+    ? nav.classList.add("scroll-header")
+    : nav.classList.remove("scroll-header");
 }
 
-window.addEventListener('scroll', scrollHeader);
+window.addEventListener("scroll", scrollHeader);
+
+/* ============ SHOW SCROLL UP ============== */
+
+function scrollUp() {
+  let scrollUp = document.getElementById("scroll-up");
+  return this.scrollY >= 560
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+}
+
+window.addEventListener("scroll", scrollUp);
+
+/* ============ DARK LIGHT THEME ============== */
+let themeButton = document.getElementById("theme-button");
+let darkTheme = "dark-theme";
+let iconTheme = "uil-sun";
+
+let selectedTheme = localStorage.getItem("selected-theme");
+let selectedIcon = localStorage.getItem("selected-icon");
+
+let getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+let getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+    iconTheme
+  );
+}
+
+themeButton.addEventListener('click', () =>{
+  // Agregar o remover dark / e icono
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  
+  // salvar el tema e icono que elige el usuario
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon',getCurrentIcon());
+
+});
