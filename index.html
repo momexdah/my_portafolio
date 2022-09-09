@@ -51,7 +51,22 @@
 
         <div class="nav-btns">
             <!-- Botón de cambio de tema  -->   
-            <i class="uil uil-moon change-theme" id="theme-button"></i>
+            <div class="toggleWrapper">
+                <input type="checkbox" class="dn" id="dn">
+                <label for="dn" class="toggle">
+                    <span class="toggle__handler">
+                        <span class="crater crater--1"></span>
+                        <span class="crater crater--2"></span>
+                        <span class="crater crater--3"></span>
+                    </span>
+                    <span class="star star--1"></span>
+                    <span class="star star--2"></span>
+                    <span class="star star--3"></span>
+                    <span class="star star--4"></span>
+                    <span class="star star--5"></span>
+                    <span class="star star--6"></span>
+                </label>
+            </div>
             
             <div class="nav-toggle" id="nav-toggle">
                 <i class="uil uil-apps"></i>
@@ -69,7 +84,7 @@
                     <a href="https://www.linkedin.com/in/diomedes-arribasplata-hernandez-315a7b188/"
                        class="home-social-icon" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
 
-                    <a href="" class="home-social-icon" target="_blank"><i class="uil uil-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=51913421452&text=Hola,%20tengo%20un%20proyecto%20en%20mente.%20:D" class="home-social-icon" target="_blank"><i class="uil uil-whatsapp"></i></a>
 
                     <a href="https://github.com/momexdah" class="home-social-icon" target="_blank"><i
                             class="uil uil-github-alt"></i></a>
@@ -116,12 +131,12 @@
         <span class="section-subtitle">Presentación</span>
 
         <div class="about-container container grid">
-            <img src="assets/images/foto.png" alt="about.jpg" class="about-img">
+            <img src="assets/images/about_me.png" alt="about.jpg" class="about-img">
 
             <div class="about-data">
                 <p class="about-description">
                     Desarrollador Web Full Stack Junior, con amplios conocimientos y experiencia,
-                    trabajando en tecnologías web y diseño UI/UX, entregando un trabajo de calidad.
+                    trabajando en tecnologías web y diseño UI/UX, entregando un trabajo de calidad. Me gustan mucho las motos y la velocidad, también el deporte y en especial programar.
                 </p>
                 <div class="about-info">
                     <div>
@@ -203,11 +218,11 @@
 
                         <div class="skills-data">
                             <div class="skills-titles">
-                                <h3 class="skills-name">React</h3>
-                                <span class="skills-number">10%</span>
+                                <h3 class="skills-name">Angular</h3>
+                                <span class="skills-number">20%</span>
                             </div>
                             <div class="skills-bar">
-                                <span class="skills-percentage skills-react"></span>
+                                <span class="skills-percentage skills-angular"></span>
                             </div>
                         </div>
 
@@ -426,12 +441,12 @@
                     <!-- ============ QUALIFICATION 1 ============== -->
                     <div class="qualification-data">
                         <div>
-                            <h3 class="qualification-title">Diseñador Web</h3>
-                            <span class="qualification-subtitle">Perú - Compraventas EIRL</span>
+                            <h3 class="qualification-title">Operador del Centro de Cómputo</h3>
+                            <span class="qualification-subtitle">Perú - ODPE ONPE</span>
                             <div class="qualification-calendar">
                                 <i class="uil uil-calendar-alt"></i>
-                                2017-2022
-                            </div>
+                                2022 - Actualmente
+                            </div>  
                         </div>
 
                         <div>
@@ -450,11 +465,11 @@
                         </div>
 
                         <div>
-                            <h3 class="qualification-title">Diseño Web</h3>
-                            <span class="qualification-subtitle">España - Udemy Academy</span>
+                            <h3 class="qualification-title">Jefe de Soporte de Sistemas</h3>
+                            <span class="qualification-subtitle">Perú - Group Arribasplata</span>
                             <div class="qualification-calendar">
                                 <i class="uil uil-calendar-alt"></i>
-                                2021 - 2022
+                                2020 - 2022
                             </div>
                         </div>
 
@@ -464,11 +479,11 @@
                     <!-- ============ QUALIFICATION 3 ============== -->
                     <div class="qualification-data">
                         <div>
-                            <h3 class="qualification-title">Desarrollo Web</h3>
-                            <span class="qualification-subtitle">Perú - Universidad Nacional de Cajamarca</span>
+                            <h3 class="qualification-title">Asistente de Soporte de Sistemas</h3>
+                            <span class="qualification-subtitle">Perú - Multiaceros Cajamarca</span>
                             <div class="qualification-calendar">
                                 <i class="uil uil-calendar-alt"></i>
-                                2017-2022
+                                2021-2020
                             </div>
                         </div>
 
@@ -492,7 +507,7 @@
                             <span class="qualification-subtitle">España - Udemy Academy</span>
                             <div class="qualification-calendar">
                                 <i class="uil uil-calendar-alt"></i>
-                                2021-2022
+                                2018-2019
                             </div>
                         </div>
                     </div>
@@ -506,49 +521,8 @@
         <span class="section-subtitle">¿Qué ofrezco?</span>
 
         <div class="services-container container grid">
+
             <!-- ============ SERVICES 1 ============== -->
-            <div class="services-content">
-                <div>
-                    <i class="uil uil-web-grid services-icon"></i>
-                    <h3 class="services-title">Diseñador <br>UI/UX</h3>
-                </div>
-
-                <span class="button button--flex button--small button--link services-button">
-                    Ver más
-                    <i class="uil uil-arrow-right button-icon"></i>
-                </span>
-
-                <div class="services-modal">
-                    <div class="services-modal-content">
-                        <h4 class="services-modal-title">Diseñador <br>UI/UX</h4>
-                        <i class="uil uil-times services-modal-close"></i>
-
-                        <ul class="services-modal-services grid">
-                            <li class="services-modal-service">
-                                <i class="uil uil-check-circle services-modal-icon"></i>
-                                <p>Desarrollo la interfaz de usuario.</p>
-                            </li>
-
-                            <li class="services-modal-service">
-                                <i class="uil uil-check-circle services-modal-icon"></i>
-                                <p>Desarrollo de páginas web.</p>
-                            </li>
-
-                            <li class="services-modal-service">
-                                <i class="uil uil-check-circle services-modal-icon"></i>
-                                <p>Creo interacciones de elementos UX.</p>
-                            </li>
-
-                            <li class="services-modal-service">
-                                <i class="uil uil-check-circle services-modal-icon"></i>
-                                <p>Posiciono la marca de tu empresa.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ============ SERVICES 2 ============== -->
             <div class="services-content">
                 <div>
                     <i class="uil uil-arrow services-icon"></i>
@@ -590,11 +564,52 @@
                 </div>
             </div>
 
+            <!-- ============ SERVICES 2 ============== -->
+            <div class="services-content">
+                <div>
+                    <i class="uil uil-server-network services-icon"></i>
+                    <h3 class="services-title">Desarrollador <br>Back-End</h3>
+                </div>
+
+                <span class="button button--flex button--small button--link services-button">
+                    Ver más
+                    <i class="uil uil-arrow-right button-icon"></i>
+                </span>
+
+                <div class="services-modal">
+                    <div class="services-modal-content">
+                        <h4 class="services-modal-title">Diseñador <br>UI/UX</h4>
+                        <i class="uil uil-times services-modal-close"></i>
+
+                        <ul class="services-modal-services grid">
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>Desarrollo la interfaz de usuario.</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>Desarrollo de páginas web.</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>Creo interacciones de elementos UX.</p>
+                            </li>
+
+                            <li class="services-modal-service">
+                                <i class="uil uil-check-circle services-modal-icon"></i>
+                                <p>Posiciono la marca de tu empresa.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!-- ============ SERVICES 3 ============== -->
             <div class="services-content">
                 <div>
-                    <i class="uil uil-pen services-icon"></i>
-                    <h3 class="services-title">Diseñador <br>de marca</h3>
+                    <i class="uil uil-globe services-icon"></i>
+                    <h3 class="services-title">Diseñador <br>de redes</h3>
                 </div>
 
                 <span class="button button--flex button--small button--link services-button">
@@ -644,12 +659,12 @@
             <div class="swiper-wrapper">
                <!-- ============ PORTFOLIO 1============== -->
                 <div class="portfolio-content grid swiper-slide">
-                    <img src="./assets/images/foto.png" alt="" class="portfolio-img">
+                    <img src="./assets/images/portfolio/popular_pelis.png" alt="" class="portfolio-img">
 
                     <div class="portfolio-data">
-                        <h3 class="portfolio-title">Modern Website</h3>
-                        <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut earum natus, praesentium eaque pariatur provident perferendis ex excepturi minus. Quidem quasi ea totam facilis maxime dolores vitae ut debitis voluptates.</p>
-                        <a href="" class="button button--flex button--small portfolio-button">
+                        <h3 class="portfolio-title">Popular Pelis Website</h3>
+                        <p class="portfolio-description">Este es uno de mis primeros proyectos, utiliza una API que se actualiza en tiempo real, y obtiene un registro de las películas más populares del momento.</p>
+                        <a href="https://momexdah.github.io/appPeliculas/" target="_blank" class="button button--flex button--small portfolio-button">
                             Demo
                             <i class="uil uil-arrow-right button-icon"></i>
                         </a>
@@ -916,6 +931,9 @@
 
 <!-- ============ MAIN JS ============== -->
 <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 </html>

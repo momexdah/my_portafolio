@@ -170,34 +170,33 @@ function scrollUp() {
 window.addEventListener("scroll", scrollUp);
 
 /* ============ DARK LIGHT THEME ============== */
-let themeButton = document.getElementById("theme-button");
+let themeButton = document.getElementById("dn");
 let darkTheme = "dark-theme";
-let iconTheme = "uil-sun";
+// let iconTheme = "uil-sun";
 
 let selectedTheme = localStorage.getItem("selected-theme");
-let selectedIcon = localStorage.getItem("selected-icon");
+// let selectedIcon = localStorage.getItem("selected-icon");
 
 let getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
-let getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+/* let getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun"; */
 
 if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+  /* themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
     iconTheme
-  );
+  ); */
 }
 
-themeButton.addEventListener('click', () =>{
+themeButton.addEventListener("click", () => {
   // Agregar o remover dark / e icono
   document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  
-  // salvar el tema e icono que elige el usuario
-  localStorage.setItem('selected-theme', getCurrentTheme());
-  localStorage.setItem('selected-icon',getCurrentIcon());
+  // themeButton.classList.toggle(iconTheme);
 
+  // salvar el tema e icono que elige el usuario
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  // localStorage.setItem('selected-icon',getCurrentIcon());
 });
