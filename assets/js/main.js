@@ -178,7 +178,7 @@ let selectedTheme = localStorage.getItem("selected-theme");
 // let selectedIcon = localStorage.getItem("selected-icon");
 
 let getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
+  document.body.classList.contains(darkTheme) ? "light" : "dark";
 /* let getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun"; */
 
