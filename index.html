@@ -11,6 +11,9 @@
     <!-- ============ CSS ============== -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!-- ============ DATA AOS ============== -->    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Momex();</title>
 </head>
 <body>
@@ -82,15 +85,15 @@
             <div class="home-content grid">
                 <div class="home-social">
                     <a href="https://www.linkedin.com/in/diomedes-arribasplata-hernandez-315a7b188/"
-                       class="home-social-icon" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+                       class="home-social-icon" target="_blank" data-aos-delay="100" data-aos="fade-up"><i class="uil uil-linkedin-alt"></i></a>
 
-                    <a href="https://api.whatsapp.com/send?phone=51913421452&text=Hola,%20tengo%20un%20proyecto%20en%20mente.%20:D" class="home-social-icon" target="_blank"><i class="uil uil-whatsapp"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=51913421452&text=Hola,%20tengo%20un%20proyecto%20en%20mente.%20:D" class="home-social-icon" target="_blank" data-aos-delay="200" data-aos="fade-up"><i class="uil uil-whatsapp"></i></a>
 
-                    <a href="https://github.com/momexdah" class="home-social-icon" target="_blank"><i
+                    <a href="https://github.com/momexdah" class="home-social-icon" target="_blank"  data-aos-delay="300" data-aos="fade-up"><i
                             class="uil uil-github-alt"></i></a>
                 </div>
 
-                <div class="home-img">
+                <div class="home-img" data-aos="zoom-in" data-aos-delay="300">
                     <svg class="home-blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <mask id="mask0" mask-type="alpha">
@@ -108,15 +111,15 @@
                         </g>
                     </svg>
                 </div>
-                <div class="home-data">
-                    <h1 class="home-title">Hola, soy Diomedes</h1>
-                    <h3 class="home-subtitle">Ingeniero de Sistemas</h3>
-                    <p class="home-description">Tengo experiencia en diseño web y conocimientos en desarrollo, he
+                <div class="home-data" >
+                    <h1 class="home-title" data-aos="fade-up"  data-aos-delay="100">Hola, soy Diomedes</h1>
+                    <h3 class="home-subtitle" data-aos="fade-up"  data-aos-delay="200">Ingeniero de Sistemas</h3>
+                    <p class="home-description" data-aos="fade-up"  data-aos-delay="300">Tengo experiencia en diseño web y conocimientos en desarrollo, he
                         producido trabajos de calidad.</p>
-                    <a href="#contact" class="button button--flex">Contáctame<i class="uil uil-message button-icon"></i></a>
+                    <a href="#contact" class="button button--flex" data-aos="fade-right" data-aos-delay="400">Contáctame<i class="uil uil-message button-icon"></i></a>
                 </div>
             </div>
-            <div class="home-scroll">
+            <div class="home-scroll" data-aos="fade-right" data-aos-delay="400">
                 <a href="#about" class="home-scroll-button button--flex">
                     <i class="uil uil-mouse-alt home-scroll-mouse"></i>
                     <span class="home-scroll-name">Desplazar</span>
@@ -127,18 +130,18 @@
     </section>
     <!-- ============ ABOUT ============== -->
     <section class="about section" id="about">
-        <h2 class="section-title">Sobre Mi</h2>
-        <span class="section-subtitle">Presentación</span>
+        <h2 class="section-title" data-aos="zoom-in-up">Sobre Mi</h2>
+        <span class="section-subtitle" data-aos="zoom-in-up">Presentación</span>
 
         <div class="about-container container grid">
-            <img src="assets/images/about_me.png" alt="about.jpg" class="about-img">
+            <img src="assets/images/about_me.png" data-aos="zoom-out-up" alt="about.jpg" class="about-img">
 
             <div class="about-data">
-                <p class="about-description">
+                <p class="about-description" data-aos="zoom-in-up">
                     Desarrollador Web Full Stack Junior, con amplios conocimientos y experiencia,
                     trabajando en tecnologías web y diseño UI/UX, entregando un trabajo de calidad. Me gustan mucho las motos y la velocidad, también el deporte y en especial programar.
                 </p>
-                <div class="about-info">
+                <div class="about-info" data-aos="zoom-in-up">
                     <div>
                         <span class="about-info-title">01+</span>
                         <span class="about-info-name">Años <br>de experiencia</span>
@@ -156,7 +159,7 @@
 
                 </div>
 
-                <div class="about-buttons">
+                <div class="about-buttons" data-aos="fade-left">
                     <a download="" href="assets/pdf/CV-DIOMEDES.pdf" class="button button--flex">
                         Descargar CV<i class="uil uil-download-alt button-icon"></i>
                     </a>
@@ -166,7 +169,9 @@
     </section>
 
     <!-- ============ SKILLS ============== -->
-    <section class="skills section" id="skills">
+    <section class="skills section" id="skills" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <h2 class="section-title">Habilidades</h2>
         <span class="section-subtitle">Mi nivel técnico</span>
 
@@ -341,7 +346,9 @@
 
 
     <!-- ============ QUALIFICATION ============== -->
-    <section class="qualification section">
+    <section class="qualification section" data-aos="fade-left"
+    data-aos-offset="500"
+    data-aos-duration="500" >
         <h2 class="section-title">Títulos</h2>
         <span class="section-subtitle">Mi experiencia personal</span>
 
@@ -517,13 +524,21 @@
     </section>
     <!-- ============ SERVICES ============== -->
     <section class="services section" id="services">
-        <h2 class="section-title">Servicios</h2>
-        <span class="section-subtitle">¿Qué ofrezco?</span>
+        <h2 class="section-title" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-delay="200">Servicios</h2>
+        <span class="section-subtitle" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-delay="250">¿Qué ofrezco?</span>
 
         <div class="services-container container grid">
 
             <!-- ============ SERVICES 1 ============== -->
-            <div class="services-content">
+            <div class="services-content" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="300">
                 <div>
                     <i class="uil uil-arrow services-icon"></i>
                     <h3 class="services-title">Desarrollador <br>Front End</h3>
@@ -565,7 +580,10 @@
             </div>
 
             <!-- ============ SERVICES 2 ============== -->
-            <div class="services-content">
+            <div class="services-content" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="1000">
                 <div>
                     <i class="uil uil-server-network services-icon"></i>
                     <h3 class="services-title">Desarrollador <br>Back-End</h3>
@@ -606,7 +624,10 @@
                 </div>
             </div>
             <!-- ============ SERVICES 3 ============== -->
-            <div class="services-content">
+            <div class="services-content" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="1500">
                 <div>
                     <i class="uil uil-globe services-icon"></i>
                     <h3 class="services-title">Diseñador <br>de redes</h3>
@@ -651,7 +672,9 @@
 
 
     <!-- ============ PORTFOLIO ============== -->
-    <section class="portfolio section" id="portfolio">
+    <section class="portfolio section" id="portfolio" data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
         <h2 class="section-title">Portafolio</h2>
         <span class="section-subtitle">Trabajos Recientes</span>
 
@@ -711,7 +734,9 @@
         </div>
     </section>
     <!-- ============ PROYECTOS EN MENTE ============== -->
-    <section class="project section">
+    <section class="project section" data-aos="fade-left"
+    data-aos-offset="500"
+    data-aos-duration="500">
         <div class="project-bg">
             <div class="project-container container grid">
                 <div class="project-data">
@@ -728,7 +753,9 @@
     </section>
 
     <!-- ============ TESTIMONIOS ============== -->
-    <section class="testimonial section">
+    <section class="testimonial section" id="skills" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
         <h2 class="section-title">Testimonios</h2>
         <span class="section-subtitle">Lo que dicen mis clientes</span>
 
@@ -812,7 +839,9 @@
     </section>
 
     <!-- ============ CONTACTAME ============== -->
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" data-aos="fade-up"
+    data-aos-offset="500"
+    data-aos-duration="500">
         <h2 class="section-title">Contáctame</h2>
         <span class="section-subtitle">Ponerse en contacto</span>
          <div class="contact-container container grid">
@@ -903,21 +932,58 @@
             </ul>
 
             <div class="footer-socials">
-                <a href="" class="footer-social" target="_blank">
-                    <i class="uil uil-facebook-f"></i>
-                </a>
-
-                <a href="" class="footer-social" target="_blank">
-                    <i class="uil uil-instagram"></i>
-                </a>
-
-                <a href="" class="footer-social" target="_blank">
-                    <i class="uil uil-twitter-alt"></i>
-                </a>
-            </div>
+                        <section class="icon-socials">
+                            <!-- Facebook -->
+                            <a
+                                    class="btn fa-bounce"
+                                    style="--clr: #3b5998;"
+                                    href="#"
+                                    role="button"
+                                    title="Facebook"
+            
+                            ><i class="fab fa-facebook-f"></i
+                            ></a>
+            
+                            <!-- Twitter -->
+                            <a
+                                    class="btn fa-bounce"
+                                    style="--clr: #55acee;"
+                                    href="#"
+                                    role="button"
+                                    title="Twitter"
+                            ><i class="fab fa-twitter"></i
+                            ></a>                
+                            <!-- Instagram -->
+                            <a
+                                    class="btn btn-primary btn-floating m-1 fa-bounce"
+                                    style="--clr:  background: #f09433; 
+                                    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+                                    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                                    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );"
+                                    href="#"
+                                    role="button"
+                                    title="Instagram"
+                            ><i class="fab fa-instagram"></i
+                            ></a>
+            
+                            <!-- Linkedin -->
+                            <a
+                                    class="btn btn-primary btn-floating m-1 fa-bounce"
+                                    style="--clr: #0082ca;"
+                                    href="#"
+                                    role="button"
+                                    title="Linkedin"
+                            ><i class="fab fa-linkedin-in"></i
+                            ></a>
+                            <!-- Right -->
+                        </section>
         </div>
-        <p class="footer-copy">&copy; Diomedes Arribasplata. Todos los derechos reservados</p> 
     </div>
+
+    <p class="footer-copy">&copy; Diomedes Arribasplata. Todos los derechos reservados</p> 
+
+    
 </footer>
 
 
@@ -933,6 +999,13 @@
 <script src="assets/js/main.js"></script>
 
 
+<!-- ============ DATA AOS ============== -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="https://kit.fontawesome.com/83bfcc9bfd.js" crossorigin="anonymous"></script>
 
 
 </body>
