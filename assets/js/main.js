@@ -138,7 +138,7 @@ function scrollActive() {
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
-        .querySelector(`.nav-menu a[href*=${sectionId}]`)
+        .querySelector(".nav-menu a[href*=" +  sectionId +"]")
         .classList.add("active-link");
     } else {
       document
@@ -148,6 +148,7 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
 /* ============ CHANGE BACKGROUND HEADER ============== */
 function scrollHeader() {
   const nav = document.getElementById("header");
@@ -168,6 +169,7 @@ function scrollUp() {
 }
 
 window.addEventListener("scroll", scrollUp);
+
 
 /* ============ DARK LIGHT THEME ============== */
 let themeButton = document.getElementById("dn");
