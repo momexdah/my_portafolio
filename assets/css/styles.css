@@ -621,6 +621,61 @@ img {
   color: var(--first-color);
 }
 
+
+/* ======== Typing Animation Text ======= */
+/* .wrapper{
+  display: inline-block;
+}
+ */
+/* .wrapper #static-txt{
+  font-size: 60px;
+  font-weight: 400;
+} */
+
+.wrapper .dynamic-txts{
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+
+.dynamic-txts li{
+  color: var(--text-color);
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  animation: slide 9s steps(3) infinite;
+  top: 0;
+}
+
+@keyframes slide {
+  100%{
+    top: -90px;
+  }
+}
+
+.dynamic-txts li span{
+  position: relative;
+}
+
+.dynamic-txts li span::after{
+  content: "";
+  left: 0;
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  border-left:2px solid var(--text-color);
+  animation: typing 3s steps(20) infinite;
+}
+
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -15px 0 15px;
+  }
+}
+
 /* ============ ABOUT ============== */
 .about-img {
   width: 200px;
